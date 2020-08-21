@@ -1,0 +1,56 @@
+*,
+button,
+input,
+select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Quicksand", "Open Sans", sans-serif;
+}
+
+:root {
+  font-size: 100%;
+}
+
+$color: #0070f3;
+
+input,
+button,
+select {
+  transition: 250ms;
+  font-size: 1.1rem;
+  padding: 8px 10px;
+  border-radius: 0.4rem;
+}
+
+input,
+select {
+  border: 1px solid #e0e0e0;
+  &:hover {
+    border-color: lighten($color, 15%);
+    box-shadow: 0 0 10px rgba($color, 0.2);
+  }
+  &:active,
+  &:focus {
+    border-color: $color;
+  }
+}
+
+button {
+  cursor: pointer;
+  background: $color;
+  color: #fff;
+  &:hover {
+    background: darken($color, 15%);
+    box-shadow: 0 0 10px rgba($color, 0.2);
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}

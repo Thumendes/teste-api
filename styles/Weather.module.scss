@@ -1,0 +1,65 @@
+.container {
+  height: 100vh;
+  max-height: 100vh;
+  padding: 8rem 12rem;
+  overflow: hidden;
+  .screen {
+    padding: 5rem;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 20px 15px #0001;
+    .info {
+      padding: 2rem;
+      height: 100%;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 200px;
+      grid-template-areas:
+        "name temperature"
+        "other other";
+      .otherinfo {
+        grid-area: other;
+        display: flex;
+        .item {
+          b {
+            font-size: 1.2rem;
+          }
+          span {
+            font-size: 3rem;
+          }
+          display: flex;
+          flex-direction: column;
+          margin-right: 3rem;
+        }
+      }
+      .name {
+        p {
+          font-size: 2rem;
+        }
+        span {
+          font-size: 3rem;
+        }
+        h1 {
+          font-size: 5rem;
+        }
+        grid-area: name;
+      }
+      .temperature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span {
+          font-size: 3rem;
+        }
+        h1 {
+          font-size: 10rem;
+        }
+        grid-area: temperature;
+      }
+    }
+  }
+}
